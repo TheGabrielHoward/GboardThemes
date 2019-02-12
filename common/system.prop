@@ -1,0 +1,6 @@
+# This file will be read by resetprop
+# Example: Change dpi
+# ro.sf.lcd_density=320
+# debug options
+ro.com.google.ime.themes_dir=/system/etc/gboard_theme
+ro.com.google.ime.theme_file=xiaomi_theme_20171222.zip
