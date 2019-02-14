@@ -44,7 +44,7 @@ print_modname() {
   ui_print "    *******************************************"
   ui_print "    *             Gboard Themes               *"
   ui_print "    *******************************************"
-  ui_print "    *             Version 4.0.0               *"
+  ui_print "    *             Version 4.0.1               *"
   ui_print "    *        by GabrielHoward, RKBDI          *"
   ui_print "    *******************************************"
   ui_print " "
