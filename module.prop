@@ -1,7 +1,7 @@
 id=gboardthemesGH
 name=Gboard Themes
-version=v4
-versionCode=400
+version=v4.0.1
+versionCode=401
 author=GabrielHoward, RKBDI
 description=Pack of themes for Google Keyboard
 minMagisk=17000
