@@ -22,6 +22,13 @@ The module modifies two of your system props to map the theme location and adds 
 - Oreo
 - Ubuntu
 
+## Colored Navbar
+For colored navbar on the themes, open a root explorer and go to
+
+> /data/data/com.google.inputmethodlatin/shared_prefs/expconfig.xml
+
+Change the value of **themed_navbar_style from 0 to 3**; save it and revoke all write permissions for the **shared_prefs** folder
+
 ## Credits
 - @RadekBledowski for the orginal module
 - @topjohnwu for Magisk
