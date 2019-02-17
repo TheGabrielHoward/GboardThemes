@@ -30,7 +30,7 @@ For colored navbar on the themes, open a root explorer and go to
 Change the value of **themed_navbar_style from 0 to 3**; save it and revoke all write permissions for the **shared_prefs** folder
 
 ## Credits
-- @RadekBledowski for the orginal module
-- @topjohnwu for Magisk
+- [@RadekBledowski](https://github.com/RadekBledowski) for the orginal module
+- [@topjohnwu](https://github.com/topjohnwu) for Magisk
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/TheGabrielHoward)
