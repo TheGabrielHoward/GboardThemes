@@ -30,7 +30,7 @@ The module modifies two of your system props to map the theme location and adds 
 ## Colored Navbar
 For colored navbar on the themes, open a root explorer and go to
 
-> /data/data/com.google.inputmethodlatin/shared_prefs/expconfig.xml
+> /data/data/com.google.android.inputmethodlatin/shared_prefs/expconfig.xml
 
 Change the value of **themed_navbar_style from 0 to 3**; save it and revoke all write permissions for the **shared_prefs** folder
 
