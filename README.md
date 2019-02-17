@@ -15,11 +15,16 @@ The module modifies two of your system props to map the theme location and adds 
 
 ## Themes
 - Material Design 2
+- Material Design 2 (Dark)
 - Material Design 2 (Amoled)
-- Windows
+- Teal 2
+- Windows old
+- ICS Old
 - IOS
+- IOS Dark
 - TWRP
-- Oreo
+- PiewDiePie
+- Oreo Cookies
 - Ubuntu
 
 ## Colored Navbar
