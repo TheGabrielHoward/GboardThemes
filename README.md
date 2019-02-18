@@ -18,8 +18,10 @@ The module modifies two of your system props to map the theme location and adds 
 - Material Design 2 (Dark)
 - Material Design 2 (Red Dark)
 - Material Design 2 (Amoled)
+- Neon Dark Blue
 - Teal 2
 - Windows old
+- White very rounded
 - IOS
 - IOS Dark
 - TWRP
