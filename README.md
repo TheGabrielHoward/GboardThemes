@@ -25,8 +25,8 @@ The module modifies two of your system props to map the theme location and adds 
 - IOS
 - IOS Dark
 - TWRP
+- XDA Blue Light
 - Oreo Cookies
-- Ubuntu
 
 ## Colored Navbar
 For colored navbar on the themes, open a root explorer and go to
