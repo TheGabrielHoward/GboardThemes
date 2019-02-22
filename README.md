@@ -5,7 +5,7 @@
 - [Description](#description)
 - [How does it work?](#how-does-it-work)
 - [Themes](#themes)
-- [Colored Navbar](#colored-navbar))
+- [Colored Navbar](#colored-navbar)
 - [Credits](#credits)
 
 ## Description
