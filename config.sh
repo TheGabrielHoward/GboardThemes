@@ -1,62 +1,63 @@
 ##########################################################################################
 #
-# Magisk Module Template Config Script
-# by topjohnwu
-#
-##########################################################################################
-##########################################################################################
-#
-# Instructions:
-#
-# 1. Place your files into system folder (delete the placeholder file)
-# 2. Fill in your module's info into module.prop
-# 3. Configure the settings in this file (config.sh)
-# 4. If you need boot scripts, add them into common/post-fs-data.sh or common/service.sh
-# 5. Add your additional or modified system properties into common/system.prop
+# Unity Config Script
+# by topjohnwu, modified by Zackptg5
 #
 ##########################################################################################
 
 ##########################################################################################
-# Configs
+# Installation Message - Don't change this
 ##########################################################################################
-
-# Set to true if you need to enable Magic Mount
-# Most mods would like it to be enabled
-AUTOMOUNT=true
-
-# Set to true if you need to load system.prop
-PROPFILE=true
-
-# Set to true if you need post-fs-data script
-POSTFSDATA=false
-
-# Set to true if you need late_start service script
-LATESTARTSERVICE=false
-
-##########################################################################################
-# Installation Message
-##########################################################################################
-
-# Set what you want to show when installing your mod
 
 print_modname() {
   ui_print " "
   ui_print "    *******************************************"
-  ui_print "    *             Gboard Themes               *"
+  ui_print "    *Gboard Themes                            *"
   ui_print "    *******************************************"
-  ui_print "    *             Version 4.0.4               *"
-  ui_print "    *        by GabrielHoward, RKBDI          *"
+  ui_print "    *v5                                       *"
+  ui_print "    *by Gabriel Howard & RKBDI                *"
   ui_print "    *******************************************"
   ui_print " "
 }
+
+##########################################################################################
+# Defines
+##########################################################################################
+
+# Uncomment and change 'MINAPI' and 'MAXAPI' to the minimum and maxium android version for your mod (note that unity's minapi is 17) due to bash)
+# Uncomment DYNAMICOREO if you want libs installed to vendor for oreo+ and system for anything older
+# Uncomment SYSOVERRIDE if you want the mod to always be installed to system (even on magisk) - note that this can still be set to true by the user by adding 'sysover' to the zipname
+# Uncomment DEBUG if you want full debug logs (saved to /sdcard in magisk manager and the zip directory in twrp) - note that this can still be set to true by the user by adding 'debug' to the zipname
+#MINAPI=21
+#MAXAPI=25
+#DYNAMICOREO=true
+#SYSOVERRIDE=true
+#DEBUG=true
+
+# Things that ONLY run during an upgrade (occurs after unity_custom) - you probably won't need this
+# A use for this would be to back up app data before it's wiped if your module includes an app
+# NOTE: the normal upgrade process is just an uninstall followed by an install
+unity_upgrade() {
+  : # Remove this if adding to this function
+}
+
+# Custom Variables for Install AND Uninstall - Keep everything within this function - runs before uninstall/install
+unity_custom() {
+  : # Remove this if adding to this function
+}
+
+# Custom Functions for Install AND Uninstall - You can put them here
+
 
 ##########################################################################################
 # Replace list
 ##########################################################################################
 
 # List all directories you want to directly replace in the system
-# Check the documentations for more info about how Magic Mount works, and why you need this
+# By default Magisk will merge your files with the original system
+# Directories listed here however, will be directly mounted to the correspond directory in the system
 
+# You don't need to remove the example below, these values will be overwritten by your own list
 # This is an example
 REPLACE="
 /system/app/Youtube
@@ -65,39 +66,32 @@ REPLACE="
 /system/framework
 "
 
-# Construct your own list here, it will override the example above
+# Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
 "
 
 ##########################################################################################
-# Permissions
+# Custom Permissions
 ##########################################################################################
 
 set_permissions() {
-  # Only some special files require specific permissions
-  # The default permissions should be good enough for most cases
+  : # Remove this if adding to this function
 
-  # Here are some examples for the set_perm functions:
+  # Note that all files/folders have the $UNITY prefix - keep this prefix on all of your files/folders
+  # Also note the lack of '/' between variables - preceding slashes are already included in the variables
+  # Use $VEN for vendor (Do not use /system$VEN, the $VEN is set to proper vendor path already - could be /vendor, /system/vendor, etc.)
 
+  # Some examples:
+
+  # For directories (includes files in them):
   # set_perm_recursive  <dirname>                <owner> <group> <dirpermission> <filepermission> <contexts> (default: u:object_r:system_file:s0)
-  # set_perm_recursive  $MODPATH/system/lib       0       0       0755            0644
 
+  # set_perm_recursive $UNITY/system/lib 0 0 0755 0644
+  # set_perm_recursive $UNITY$VEN/lib/soundfx 0 0 0755 0644
+
+  # For files (not in directories taken care of above)
   # set_perm  <filename>                         <owner> <group> <permission> <contexts> (default: u:object_r:system_file:s0)
-  # set_perm  $MODPATH/system/bin/app_process32   0       2000    0755         u:object_r:zygote_exec:s0
-  # set_perm  $MODPATH/system/bin/dex2oat         0       2000    0755         u:object_r:dex2oat_exec:s0
-  # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
 
-  # The following is default permissions, DO NOT remove
-  set_perm_recursive  $MODPATH  0  0  0755  0644
+  # set_perm $UNITY/system/lib/libart.so 0 0 0644
 }
-
-##########################################################################################
-# Custom Functions
-##########################################################################################
-
-# This file (config.sh) will be sourced by the main flash script after util_functions.sh
-# If you need custom logic, please add them here as functions, and call these functions in
-# update-binary. Refrain from adding code directly into update-binary, as it will make it
-# difficult for you to migrate your modules to newer template versions.
-# Make update-binary as clean as possible, try to only do function calls in it.
