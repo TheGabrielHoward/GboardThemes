@@ -59,15 +59,15 @@ Change the value from 0 to 3
 set "false" to "true"
 
 ### Clipboard
-> /data/data/com.google.android.inputmethodmethod.latin/shared_prefs/exp_config.xml
+"enable_clipboard"
 
-Find **enable_clipboard** and set "false" to "true", save it and revoke all write permissions for the **shared_prefs** folder
+set "false" to "true"
 
 ### Minimal Google Logo
 "enable_monochrome_g_icon"
 
 set "false" to "true"
-
+#
 ## Credits
 - [@RadekBledowski](https://github.com/RadekBledowski) for the orginal module
 - [@topjohnwu](https://github.com/topjohnwu) for Magisk
