@@ -33,17 +33,40 @@ The module modifies two of your system props to map the theme location and adds 
 
 ## PRO TIPS
 
-### Colored Navbar
-For colored navbar on the themes, open a root explorer and go to
-
+All to change is in **expconfig.xml** located on:
 > /data/data/com.google.android.inputmethodlatin/shared_prefs/expconfig.xml
 
-Change the value of **themed_navbar_style from 0 to 3**, save it and revoke all write permissions for the **shared_prefs** folder
+- You need to revoke wirte acces to shared_prefs folder
+- After save changes to expconfigs.xml, force close Gboard App
+
+### Colored Navbar
+"themed_navbar_style"
+
+Change the value from 0 to 3
+
+### M2 Gboard Theme
+ "enable_m2_horizontal_scroll"
+ 
+ "enable_m2_theme"
+ 
+ "enable_m2_for_non_default"
+ 
+ "enable_m2_for_expression_headers"
+ 
+ "enable_m2_for_search_cards"
+ 
+ 
+set "false" to "true"
 
 ### Clipboard
 > /data/data/com.google.android.inputmethodmethod.latin/shared_prefs/exp_config.xml
 
 Find **enable_clipboard** and set "false" to "true", save it and revoke all write permissions for the **shared_prefs** folder
+
+### Minimal Google Logo
+"enable_monochrome_g_icon"
+
+set "false" to "true"
 
 ## Credits
 - [@RadekBledowski](https://github.com/RadekBledowski) for the orginal module
