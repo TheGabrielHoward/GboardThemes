@@ -19,6 +19,7 @@ The module modifies two of your system props to map the theme location and adds 
 - Material Design 2 (AOSP)
 - Material Design 2 (Orange-Yellow)
 - Material Design 2 (Purple)
+- Material Design 2 (BlueSky)
 - Material Design 2 (Dark)
 - Material Design 2 (Red Dark)
 - Material Design 2 (Amoled)
